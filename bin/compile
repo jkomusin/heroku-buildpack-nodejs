@@ -77,6 +77,7 @@ cd $build_dir
     rm id_rsa
     # Add github to the list of known hosts - ignore the warning or else set -e will abort the deployment
     ssh -oStrictHostKeyChecking=no -T git@github.com || true
+    ssh -oStrictHostKeyChecking=no -T git@bitbucket.org || true
   fi  
 
   # If node_modules directory is checked into source control then
